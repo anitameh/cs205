@@ -12,7 +12,7 @@ A good next step would thus be to figure out a way to reduce this computation ti
 
 Working with the music data and learning about spectral clustering was fun (after all, we were attempting to make cool mixes!) but also very frustrating: interpreting our results, for example, proved difficult. We were working with discrete features but had to interpret them in a continuous fashion. Also interesting was installing PyCUDA and MPI4Py on the Odyssey cluster, though this was frustrating at times as well. Learning the algorithm for approximate SVD’s was very cool. Finally, implementing the parallel approximate SVD was very empowering: we now have the power to operate on large matrices in a fashion that is useful for a vast range of research and industry-related projects.
 
-### References
+## References
 
 [1] S. Friedland, A. Niknejad, M. Kaveh, and H. Zare, \Fast monte-carlo low rank approximations for matrices,” Proc. IEEE SoSE , pp. 218{223, 2006.
 
