@@ -6,7 +6,7 @@ Final CPU calculations were run on the Harvard Faculty of Arts and Sciences Odys
 export PYTHONPATH=$HOME/pycuda/lib/python:$PYTHONPATH
 ```
 
-Submission files for running the code on 16 CPUs and 16 GPUs can be found here: <script src="https://gist.github.com/anitameh/aa92c1c7e041d2c122c3a3625a402c0a.js"></script>.
+Submission files for running the code on 16 CPUs and 16 GPUs can be found [here](https://gist.github.com/anitameh/aa92c1c7e041d2c122c3a3625a402c0a.js).
 
 PyCUDA would only compile and run successfully in the presence of GCC-4.6, hence the unloading of GCC4.7 seen above. We recognize that since access to gpgpu is restricted to the Aspuru-Guzik group, repeating these calculations exactly will be almost impossible for the instructors; however, we hope that with these submission file examples the code could be run on Resonance GPUs, though memory might be a bit of an issue.
 
