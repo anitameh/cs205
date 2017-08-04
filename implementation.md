@@ -1,4 +1,4 @@
-### Hardware & Running the Code
+## Hardware & Running the Code
 
 Final CPU calculations were run on the Harvard Faculty of Arts and Sciences Odyssey2 cluster. Final GPU calculations were run on the GPGPU cluster on Odyssey2, which is owned by the Aspuru-Guzik group and contains 32 NVIDIA K20s, two per node. Access was provided by Sam Blau, a member of the Aspuru-Guzik group, and he ran all of the GPU calculations. Local installs of PyCUDA and SciKits, containing CUDABLAS, were performed, necessitating the following modification of Sam’s .bashrc file to run the calculations:
 

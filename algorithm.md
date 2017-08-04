@@ -1,4 +1,6 @@
-### Algorithm [1]
+## The Algorithm 
+
+### Part 1
 
 Analyzing big data may require finding an approximate representation for the system due to computational limitations. A popular method for approximating large systems is by first factorizing the system with the Singular Value Decomposition (SVD). However, computing the SVD is typically done in a two-step process by first reducing to a bi-diagonal matrix and then computing the SVD of this bi-diagonal matrix using an iterative method.
 
@@ -14,7 +16,7 @@ However, a better approach would be to distribute your large matrix “A” acro
 
 This large matrix “A” could also be distributed across multiple GPUs to attain even greater speedups.   We hypothesize that by using distributed memory i.e. splitting up and distributing pieces of A to each GPU (along with pieces of the orthonormal columns) we will see speed-ups. We then compute the dot product on each GPU, and aggregate the results by performing a reduction on the CPU (as shown above).
 
-### Algorithm [2]
+### Part 2
 
 For this portion of the project, we use the parallel SVD approximation to determine a “good” mix of music. Importantly, note that the eigenvectors from an SVD of a covariance matrix are used in spectral clustering. This is used to determine the clusters in which the data points (i.e. songs) are grouped. We construct a covariance matrix that captures the similarities between each song. This similarity metric is equal to the 2-norm between nine attributes of pairs of songs i, j:
 
