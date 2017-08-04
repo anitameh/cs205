@@ -4,39 +4,9 @@ Final CPU calculations were run on the Harvard Faculty of Arts and Sciences Odys
 
 ```
 export PYTHONPATH=$HOME/pycuda/lib/python:$PYTHONPATH
-
-Submission files for running the code on 16 CPUs and 16 GPUs are shown below:
-
-#!/bin/sh
-#SBATCH -n 16 #Number of CPUs
-#SBATCH –ntasks-per-node=16 # Use cores on the same node
-#SBATCH -t 120 #Runtime in minutes
-#SBATCH -p aspuru-guzik #Partition to submit to
-#SBATCH –mem=200000 #Memory per node in MB
-#SBATCH –exclusive # Run on a node without any other jobs
-
-module load hpc/mpi4py-1.3_python-2.7_openmpi-1.6_gcc-4.7.0thread
-module load hpc/python-2.7.1_full_stack
-
-mpiexec -n 16 python svd_approx.py > svd_approx.out
-
-#!/bin/sh
-#SBATCH -n 16 #Number of GPUs
-#SBATCH –ntasks-per-node=2  # Use both GPUs on a node
-#SBATCH -t 120 #Runtime in minutes
-#SBATCH -p gpgpu #Partition to submit to
-#SBATCH –mem=30000 #Memory per node in MB
-##SBATCH –exclusive  # Run on nodes without any other jobs
-##SBATCH –mem-per-cpu #Memory per cpu in MB
-
-module load hpc/mpi4py-1.3_python-2.7_openmpi-1.6_gcc-4.7.0thread
-module load hpc/python-2.7.1_full_stack
-module unload hpc/gcc-4.7.0
-module load hpc/gcc-4.6.1
-module load hpc/cuda-5.0.35
-
-mpiexec -n 16 python svd_approx.py > svd_approx.out
 ```
+
+Submission files for running the code on 16 CPUs and 16 GPUs can be found here: <script src="https://gist.github.com/anitameh/aa92c1c7e041d2c122c3a3625a402c0a.js"></script>.
 
 PyCUDA would only compile and run successfully in the presence of GCC-4.6, hence the unloading of GCC4.7 seen above. We recognize that since access to gpgpu is restricted to the Aspuru-Guzik group, repeating these calculations exactly will be almost impossible for the instructors; however, we hope that with these submission file examples the code could be run on Resonance GPUs, though memory might be a bit of an issue.
 
